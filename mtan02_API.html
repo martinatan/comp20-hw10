@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API Fun with the Rijksmuseum API</title>
+	<script src="script.js"></script>
+
+	<style>
+		body {
+			text-align: center;
+			color: #18435e;
+			background-color: #f5e2c1;
+			font-family: Helvetica, Sans-serif;
+		}
+		div {
+			padding: 15px 0px;
+		}
+		#works li {
+			list-style: none;
+		}
+		#hw_responses {
+			text-align: left;
+		}
+		li {
+			font-size: 18px;
+		}
+		img {
+			width: 500px;
+		}
+	</style> 
+</head>
+<body>
+	<h1>Vincent Van Gogh at the Rijksmuseum, Amsterdam!</h1>
+	<h2>Here are all of the works in the Rijksmuseum collection that were created by Vincent Van Gogh.</h2>
+
+	<div id = "works"></div>
+
+	<div id = "hw_responses">
+		<h2>Homework Responses</h2>
+		<ul>
+			<li><strong>Describe the API you selected and what it does:</strong> This API provides information on objects from the art collection of the Rijksmuseum in Amsterdam, the Netherlands, including identification details for the object as well as the kind of information that visitors to the museum would like to see such as title, date, artist name, medium, and images of the object.</li>
+			<li><strong>Cite the website where you found it:</strong> <a href = "https://data.rijksmuseum.nl/object-metadata/api/">https://data.rijksmuseum.nl/object-metadata/api/</a></li>
+			<li><strong>Describe the options you used for the API request: </strong> I used the URL "https://www.rijksmuseum.nl/api/nl/collection?key=[apikey]&involvedMaker=Vincent+van+Gogh" for my API request, where [apikey] was replaced with the key I obtained by signing up for an account with the Rijksmuseum website. After the '&'' symbol, the only parameter I specified was "involvedMaker" so that I could choose all works in the collection databse that had van Gogh as the artist. Besides this, I selected a few key-value pairs from the actual JSON object I received through my request, specifically the title and image URL of the array of artObjects that comprised the body of work by van Gogh in the collection.</li>
+			<li><strong>Give two applications where this API would be helpful:</strong>
+				<ol>
+					<li>An application that helps users explore artworks in the museum by random generation of a new artwork when a button is pressed or the page is refreshed.</li>
+					<li>An application that allows users to filter artworks in the museum by metadata such as title and the creator of the work, and the description of the work from the museum.</li>
+				</ol>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
